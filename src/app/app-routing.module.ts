@@ -1,3 +1,4 @@
+import { EnsureLoginGuard } from './login/ensure-login.guard';
 import { LayoutGuard } from './layout/layout.guard';
 import { LayoutComponent } from './layout/layout.component';
 import { LoginComponent } from './login/login.component';
@@ -13,7 +14,8 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginComponent,
+    canDeactivate: [EnsureLoginGuard]
   },
   {
     path: '',

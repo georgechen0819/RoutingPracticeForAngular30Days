@@ -10,11 +10,11 @@ export class LayoutGuard implements CanActivate {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree
   {
-    const canActivate = next.queryParams.name === "George";
+    const canActivate = next.queryParams.name === 'George';
 
     if (!canActivate)
     {
-      alert("你不是 George，請離開 !");
+      alert('你不是 George，請離開 !');
     }
     return canActivate;
   }

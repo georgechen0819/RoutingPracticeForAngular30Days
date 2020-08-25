@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
+  name: string;
   constructor(private router: Router) { }
 
   ngOnInit(): void {
@@ -16,7 +17,7 @@ export class LoginComponent implements OnInit {
   login(): void {
     this.router.navigate([''], {
       queryParams: {
-        name: 'George.chen'
+        name: this.name
       }
     });
   }
